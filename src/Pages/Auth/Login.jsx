@@ -17,10 +17,13 @@ const Auth = () => {
                     <h2>
                         Log-in Admin
                     </h2>
-                    <label>Enter Phone Number
-                    <input type="Number" placeholder="+91 8957456321" />
+                    <label>Enter Email
+                    <input type="email" placeholder="johndoe@gmail.com" />
                     </label>
-                    <button>Get OTP</button>
+                    <label>Enter Password
+                    <input type="password" placeholder="********" />
+                    </label>
+                    <button>Login</button>
                 </form>
             </div>
         </div>
