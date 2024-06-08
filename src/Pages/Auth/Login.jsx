@@ -6,7 +6,7 @@ const Auth = () => {
         <div className={styles.main}>
             <div className={styles.left}>
                 <h1>
-                    Salon Hub
+                    Salon Dekho
                 </h1>
                 <h3>
                     The best salon booking platform.
