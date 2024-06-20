@@ -4,7 +4,6 @@ import Header from "../../Components/Header/Header";
 import SideBar from "../../Components/Sidebar/Sidebar";
 const ShopDetails = () => {
     const state = useLocation();
-    console.log(state?.state)
     const allImages = [...state?.state?.StorePhotos, state?.state?.CoverImage];
     return ( 
         <div className={styles.main}>

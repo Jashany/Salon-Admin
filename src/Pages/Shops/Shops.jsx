@@ -18,7 +18,6 @@ const Shops = () => {
       .then((res) => res.json())
       .then((data) => {
         setShops(data?.data);
-        console.log(data);
       })
       .catch((err) => {
         console.log(err);
