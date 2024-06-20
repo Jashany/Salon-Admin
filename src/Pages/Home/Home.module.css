@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+}
+
+.box{
+    height: 500px;
+    width: 400px;
+    overflow: scroll;
+    padding: 25px;
+}
+
+.perf{
+    margin-top: 10vh;
+    padding: 20px;
+}
+
+.stat{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.stat h2{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.stat h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+

@@ -1,0 +1,58 @@
+.main{
+    height: 100vh;
+    display: flex;
+
+}
+
+.shops{
+    margin-top: 10vh;
+    padding: 20px 10px;
+}
+
+.shops h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.shops td{
+    font-size: 0.75rem;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    min-width: 1000px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+thead tr {
+    color: #1C1C1C66;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.65rem;
+}
+th, td {
+    padding: 12px 15px;
+    border: none; /* Remove borders */
+    border-bottom: 1px solid #ddd;
+}
+tbody tr {
+    border: none;
+}
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+tbody tr:last-of-type {
+    border: none;
+}
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+

@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 10vh;
+    background-color: #ffffff;
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header h2{
+    font-size: 1.25rem;
+    font-weight: 500;
+}

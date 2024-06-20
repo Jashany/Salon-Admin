@@ -1,0 +1,117 @@
+.main{
+    display: flex;
+  
+}
+
+
+
+.shop{
+    margin-top: 10vh;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box{
+    height: 500px;
+    width: 400px;
+    overflow: scroll;
+    padding: 25px;
+}
+
+.artist{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service{
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.artists h2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.artists h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.services h2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.services h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.offers h2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.offers h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+
+
+.shop>div{
+    padding-top: 20px;
+    text-align: center;
+    background-color: white;
+    height: fit-content;
+    border: 1px solid #49494995;
+    border-radius: 15px;
+}
+
+.photos{
+    height: fit-content;
+}
+
+.images{
+    min-height: 200px;
+    width: 600px;
+    display: flex;
+    gap: 1rem;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+.photo img{
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.brocher{
+    width: 300px;
+    height: 300px;
+}
+
+.brocherImage{
+    height: 280px;
+}
+
+.brocher img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
