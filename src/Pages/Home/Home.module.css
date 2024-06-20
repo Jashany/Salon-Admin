@@ -3,9 +3,8 @@
 }
 
 .box{
-    height: 500px;
+    min-height: 500px;
     width: 400px;
-    overflow: scroll;
     padding: 25px;
 }
 
