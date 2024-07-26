@@ -28,6 +28,10 @@ const Home = () => {
         <h2>Performance</h2>
         <div className={styles.box}>
           <div className={styles.stat}>
+            <h2>Total Otps Sent:</h2>
+            <h3>{stats?.data?.stats?.OtpCount}</h3> 
+          </div>
+          <div className={styles.stat}>
             <h2>Total Appointments:</h2>
             <h3>{stats?.data?.totalAppointments}</h3>
           </div>
