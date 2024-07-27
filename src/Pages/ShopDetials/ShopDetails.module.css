@@ -100,12 +100,11 @@
 
 
 .photo img{
-    height: 100px;
+    height: 150px;
     margin-bottom: 1rem;
 }
 
 .brocher{
-    width: 500px;
     height: fit-content;
 }
 
@@ -118,7 +117,7 @@
 }
 
 .brocher img{
-    width: 100px;
+    width: 150px;
     height: 100%;
 }
 
