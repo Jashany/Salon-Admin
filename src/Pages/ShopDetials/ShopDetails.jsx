@@ -84,7 +84,11 @@ const ShopDetails = () => {
                 <div className={styles.brocher}>
                     <h2>Brochure</h2>
                     <div className={styles.brocherImage}>
-                        <img src={state?.state?.Brochure} alt="brochure" />
+                        {state?.state?.Brochure.map((brochure, index) => {
+                            return (
+                                <img key={index} src={brochure} alt="brochure" />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
