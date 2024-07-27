@@ -1,6 +1,6 @@
 .main{
     display: flex;
-  
+    height: 100vh;
 }
 
 
@@ -8,8 +8,10 @@
 .shop{
     margin-top: 10vh;
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-    flex-wrap: wrap;
+    overflow: scroll;
+    flex: 1;
     padding: 20px;
 }
 
@@ -33,6 +35,10 @@
 .offer{
     display: flex;
     justify-content: space-between;
+}
+
+.artists{
+    width: 100%;
 }
 
 .artists h2{
@@ -75,10 +81,7 @@
 
 .shop>div{
     padding-top: 20px;
-    text-align: center;
-    background-color: white;
     height: fit-content;
-    border: 1px solid #49494995;
     border-radius: 15px;
 }
 
@@ -176,4 +179,16 @@
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+.serviceButton button{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }

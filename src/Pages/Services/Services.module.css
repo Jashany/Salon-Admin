@@ -1,0 +1,29 @@
+.services {
+  margin-top: 12vh;
+  width: 80%;
+margin-inline:  auto;
+}
+
+.services h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+.services button{
+    padding: 0.25rem 1rem;
+    background-color: #000;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.main {
+  display: flex;
+  width: 100%;
+}

@@ -6,6 +6,7 @@ import store from "./Store";
 import Shops from "./Pages/Shops/Shops";
 import ShopDetails from "./Pages/ShopDetials/ShopDetails";
 import PrivateRoute from "./Components/PrivateRoute";
+import UploadServices from "./Pages/Services/Services";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/shops" element={<Shops />} />
           <Route path="/shop/:id" element={<ShopDetails />} />
+          <Route path="/services/:id" element={<UploadServices />} />
           </Route>
         </Routes>
       </Provider>
