@@ -9,13 +9,33 @@ const ShopDetails = () => {
     const allImages = [...state?.state?.StorePhotos, state?.state?.CoverImage];
 
     const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(null);
+    const [currentImageList, setCurrentImageList] = useState([]);
 
-    const handleImageClick = (image) => {
+    const handleImageClick = (image, index, imageList) => {
         setSelectedImage(image);
+        setCurrentIndex(index);
+        setCurrentImageList(imageList);
     };
 
     const handleCloseModal = () => {
         setSelectedImage(null);
+        setCurrentIndex(null);
+        setCurrentImageList([]);
+    };
+
+    const handleNext = (e) => {
+        e.stopPropagation();
+        const nextIndex = (currentIndex + 1) % currentImageList.length;
+        setSelectedImage(currentImageList[nextIndex]);
+        setCurrentIndex(nextIndex);
+    };
+
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        const prevIndex = (currentIndex - 1 + currentImageList.length) % currentImageList.length;
+        setSelectedImage(currentImageList[prevIndex]);
+        setCurrentIndex(prevIndex);
     };
 
     return ( 
@@ -68,17 +88,24 @@ const ShopDetails = () => {
                 <div className={styles.photos}>
                     <h2>Photos</h2>
                     <div className={styles.images}>
-                    {allImages.map((photo, index) => {
+                    {state?.state?.StorePhotos.map((photo, index) => {
                         return (
                             <div key={index} className={styles.photo}>
                                 <img 
                                     src={photo} 
                                     alt="salon" 
-                                    onClick={() => handleImageClick(photo)} 
+                                    onClick={() => handleImageClick(photo, index, state?.state?.StorePhotos)} 
                                 />
                             </div>
                         )
                     })}
+                    <div className={styles.photo}>
+                        <img 
+                            src={state?.state?.CoverImage} 
+                            alt="salon cover" 
+                            onClick={() => handleImageClick(state?.state?.CoverImage, state?.state?.StorePhotos.length, allImages)} 
+                        />
+                    </div>
                     </div>
                 </div>
                 <div className={styles.brocher}>
@@ -88,7 +115,7 @@ const ShopDetails = () => {
                             return (
                                 <div key={index} className={styles.photo}>
                                 <img key={index} src={brochure} alt="brochure" onClick={()=>{
-                                    handleImageClick(brochure)
+                                    handleImageClick(brochure, index, state?.state?.Brochure)
                                 }} />
                                 </div>
                             )
@@ -99,8 +126,12 @@ const ShopDetails = () => {
 
             {selectedImage && (
                 <div className={styles.modal} onClick={handleCloseModal}>
-                    <span className={styles.close}>&times;</span>
-                    <img className={styles.modalContent} src={selectedImage} alt="Full Size" />
+                    <span className={styles.close} onClick={handleCloseModal}>&times;</span>
+                    <div className={styles.modalContentWrapper} onClick={(e) => e.stopPropagation()}>
+                        <img className={styles.modalContent} src={selectedImage} alt="Full Size" />
+                        <button className={styles.prev} onClick={handlePrev}>&#10094;</button>
+                        <button className={styles.next} onClick={handleNext}>&#10095;</button>
+                    </div>
                 </div>
             )}
         </div>
