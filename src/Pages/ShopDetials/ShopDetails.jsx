@@ -86,7 +86,11 @@ const ShopDetails = () => {
                     <div className={styles.brocherImage}>
                         {state?.state?.Brochure.map((brochure, index) => {
                             return (
-                                <img key={index} src={brochure} alt="brochure" />
+                                <div key={index} className={styles.photo}>
+                                <img key={index} src={brochure} alt="brochure" onClick={()=>{
+                                    handleImageClick(brochure)
+                                }} />
+                                </div>
                             )
                         })}
                     </div>
