@@ -28,7 +28,7 @@ const Shops = () => {
       <Header />
       <SideBar />
       <div className={styles.shops}>
-        <h2>Lists of Shops</h2>
+        <h2>Number of Shops: {shops.length}</h2>
         <div>
           <table border="1">
             <thead>
@@ -57,6 +57,9 @@ const Shops = () => {
                   (service) => service?.type
                 );
 
+                const brocherExist = shop?.Brochure?.length > 0;
+
+
                 return (
                   <tr
                     key={shop?._id}
@@ -64,7 +67,9 @@ const Shops = () => {
                       navigate(`/shop/${shop?._id}`, { state: shop });
                     }}
                   >
-                    <td>{shop?.SalonName}</td>
+                    <td>{shop?.SalonName} <span>
+                     {brocherExist ? <p>(B)</p> : null}
+                      </span></td>
                     <td>{shop?.OwnerName}</td>
                     <td>{shop?.userId?.phoneNumber}</td>
                     <td>{shop?.userId?.phoneNumber}</td>
