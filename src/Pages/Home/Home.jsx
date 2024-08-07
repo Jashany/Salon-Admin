@@ -15,6 +15,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setStats(data);
+        console.log(data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,7 +30,7 @@ const Home = () => {
         <div className={styles.box}>
           <div className={styles.stat}>
             <h2>Total Otps Sent:</h2>
-            <h3>{stats?.data?.stats?.OtpCount}</h3> 
+            <h3>{stats?.data?.stats?.OtpCount}</h3>
           </div>
           <div className={styles.stat}>
             <h2>Total Appointments:</h2>
@@ -48,8 +49,36 @@ const Home = () => {
             <h3>{stats?.data?.weeklyAppointments}</h3>
           </div>
           <div className={styles.stat}>
-            <h2>Weekly Users:</h2>
-            <h3>{stats?.data?.weeklyUsers}</h3>
+            <h2>App Users:</h2>
+            <h3>{stats?.data?.AppUsers}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Total Web Users:</h2>
+            <h3>{stats?.data?.totalCustomers}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Daily Web Users:</h2>
+            <h3>{stats?.data?.DailyAppUsers}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Completed Appointments:</h2>
+            <h3>{stats?.data?.completedAppointments}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Cancelled Appointments:</h2>
+            <h3>{stats?.data?.CancelledAppointments}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Daily App Users:</h2>
+            <h3>{stats?.data?.DailyAppUsers}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Total Reviews:</h2>
+            <h3>{stats?.data?.TotalRatings}</h3>
+          </div>
+          <div className={styles.stat}>
+            <h2>Todays Reviews:</h2>
+            <h3>{stats?.data?.DailyRatings}</h3>
           </div>
         </div>
       </div>
