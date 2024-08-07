@@ -80,6 +80,10 @@ const Home = () => {
             <h2>Todays Reviews:</h2>
             <h3>{stats?.data?.DailyRatings}</h3>
           </div>
+          <div className={styles.stat}>
+            <h2>Deleted salons:</h2>
+            <h3>{stats?.data?.stats?.deletedSalonCount}</h3>
+          </div>
         </div>
       </div>
     </div>
